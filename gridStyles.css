@@ -3,6 +3,7 @@ body{
 	height: 100vh;
 	/*background-color: darkgrey;*/
 	margin: 0;
+	margin-left: 10px;
 	padding: 0;
 	display: grid;
 	grid-gap:13px;
@@ -34,4 +35,27 @@ footer{
 	grid-area: footer;
 	background-color: rgba(240,240,240,1);
 	box-shadow: 0 0  5px rgba(0, 0, 0,0.7);
+}
+@media only screen and (max-width: 500px){
+	body{
+		margin-left: 15px;
+		grid-gap:9px;
+		grid-template-rows: 100px auto auto auto 100px;
+		grid-template-columns:90%;
+		grid-template-areas:"header" 
+							"top"
+							"middle"
+							"bottom"
+							"footer";
+	}
+	header{
+		text-align: center;
+	}
+	.box{
+		padding: 10px;
+	}
+	#l{grid-area: top;}
+	#m{grid-area: middle;}
+	#r{grid-area: bottom;}
+	footer{grid-area:footer;}
 }
